@@ -8,7 +8,9 @@ import java.util.List;
 import entitites.enums.OrderStatus;
 
 public class Order {
+	
 	public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	
 	private Date moment;
 	private OrderStatus status;
 	private Client client;
@@ -20,7 +22,6 @@ public class Order {
 	}
 
 	public Order(Date moment, OrderStatus status, Client client) {
-		super();
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
@@ -49,10 +50,6 @@ public class Order {
 
 	public void setClient(Client client) {
 		this.client = client;
-	}
-
-	public List<OrderItem> getItems() {
-		return items;
 	}
 
 	public void addItem(OrderItem item) {

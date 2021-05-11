@@ -20,7 +20,7 @@ public class Program {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
-		Date sysDate = new Date();
+//		Date sysDate = new Date();
 
 		System.out.println("Enter client data: ");
 		System.out.print("Name: ");
@@ -40,7 +40,7 @@ public class Program {
 		int n = sc.nextInt();
 		sc.nextLine();
 		
-		Order order = new Order(sysDate, OrderStatus.valueOf(orderStatus), client);
+		Order order = new Order(new Date(), OrderStatus.valueOf(orderStatus), client);
 		
 		for(int i = 1; i<=n; i++) {
 			System.out.printf("Enter #%d item data:",i);
